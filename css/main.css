@@ -12,7 +12,7 @@ body {
   background-position: center; }
 
 .container-fluid {
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: rgba(0, 0, 0, 0.5); }
 
 .box-welcome {
   background-color: rgba(157, 176, 172, 0.7);
@@ -23,6 +23,16 @@ body {
 
 .welcome-text, .know-journey {
   color: #003865; }
+
+.text-description {
+  color: #ffffff;
+  font-size: 120%; }
+
+.weather {
+  color: #ffffff;
+  font-size: 120%; }
+  .weather i {
+    color: #f0ab00; }
 
 @media (max-width: 740px) {
   .view {
