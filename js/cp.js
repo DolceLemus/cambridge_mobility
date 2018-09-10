@@ -28,6 +28,6 @@ const getGeolocation=(cp)=>{
 }
 
 const drawMap=(objUbication)=>{
- let map=new google.maps.Map()
+ let map=new google.maps.Map( )
 }
   
