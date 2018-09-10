@@ -14,9 +14,6 @@
     "start": "node src/app.js",
     "cp": "node src/cp.js",
     "routing": "node src/routing.js"
-    // babel 
-
-
   },
   "repository": {
     "type": "git",
