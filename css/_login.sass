@@ -3,12 +3,32 @@
 body 
     font-family: $roboto
 
-.view
-    @include bgimage (localizacion)
-    
-.hm-black-light
-    background-color: rgba($graphite, 0.3)
+.mask
+    @include bgimage (map)
+
+.container-fluid
+    background-color: rgba($dark, 0.5)
+
+.box-welcome
+    background-color: rgba($platinum, 0.7)
+    border-radius: $radius
+
+.hr-light
+    color: $gold
+
+.welcome-text, .know-journey
+    color: $navy
+
+.text-description
+    color: $white
+    font-size: 120%
+
+.weather
+    color: $white
+    font-size: 120%
+    i 
+        color: $gold
 
 @media (max-width: 740px)
     .view
-        height: 500px
+        height: 600px
