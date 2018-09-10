@@ -8,6 +8,7 @@ $purple: #3c1053
 $graphite: #3c4242
 $mulberry: #830051 //more purple
 $gold: #f0ab00
+$dark: #000000
 
 /*Fonts*/
 $roboto: Roboto, Sans-serif
@@ -15,5 +16,10 @@ $roboto: Roboto, Sans-serif
 
 @mixin bgimage ($img)
     $url:"../assets/images/#{$img}.png"
-    background: url($url)
+    background-image: url($url)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    
+
     
