@@ -1,4 +1,4 @@
-
+'use strict';
 //Validate Cp 
 let cp="CB11AB";
 const validateCp=(cp)=>{
@@ -31,3 +31,6 @@ const drawMap=(objUbication)=>{
  let map=new google.maps.Map( )
 }
   
+
+
+module.exports = ;
