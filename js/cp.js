@@ -1,16 +1,20 @@
 
-
+//Validate Cp 
 let cp="CB11AB";
+const validateCp=(cp)=>{
     const regex=/^([Cc][Bb]1[0-1][A-Za-z]{2})$/;
         console.log(regex);
-    if (regex.exec(cp) != null) {
-        console.log(cp);
-        console.log("true");
-    }else{
-        console.log("false");
+    if (regex.exec(cp) != null){
+        getGeolocation(cp);
+        return true;
     }
-
-
+    else{
+        alert("zip code invalidate");
+        return false;
+    }      
+}
+// Geolocation Function
+const getGeolocation=(cp)=>{
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(userUbication=(cp)=>{
             let ubication={
@@ -18,7 +22,12 @@ let cp="CB11AB";
                 lng:cp.coords.longitude
             }
             console.log(ubication);
-        })
+            drawMap(ubication);
+        });
+    }
 }
 
+const drawMap=(objUbication)=>{
+ let map=new google.maps.Map( )
+}
   
