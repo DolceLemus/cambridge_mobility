@@ -1,9 +1,10 @@
 'use strict';
 
-const dulce = "hola";
 
-const test = (dulce) => {
-    console.log(dulce);
+const test = () => {
+    console.log("hola");
 }
+
+test();
 
 module.exports = test;

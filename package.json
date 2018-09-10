@@ -11,9 +11,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "auth": "node src/auth.js",
-    "start": "node ./src/app.js",
-    "cp": "node ./src/cp.js",
-    "routing": "node ./src/routing.js"
+    "start": "node src/app.js",
+    "cp": "node src/cp.js",
+    "routing": "node src/routing.js"
+    // babel 
+
+
   },
   "repository": {
     "type": "git",
