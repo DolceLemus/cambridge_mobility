@@ -36,8 +36,8 @@
     "url": "https://github.com/DolceLemus/cambridge_mobility/issues"
   },
   "scripts": {
-    "cp": "cp.js",
-    "routing": "routing.js"
+    "cp": "node cp.js",
+    "routing": "node routing.js"
   
 },  
   "homepage": "https://github.com/DolceLemus/cambridge_mobility#readme"
