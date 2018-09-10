@@ -2,9 +2,10 @@
   "name": "cambridge_mobility",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "\u001b[D\u001b[D\u001b[D\u001bapp\u001b[3~\u001b[3~\u001b[3~.js(\u001b[3~\u001b[C)",
   "dependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "babel-install": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -12,12 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lillys21/cambridge_mobility.git"
+    "url": "git+https://github.com/DolceLemus/cambridge_mobility.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lillys21/cambridge_mobility/issues"
+    "url": "https://github.com/DolceLemus/cambridge_mobility/issues"
   },
-  "homepage": "https://github.com/Lillys21/cambridge_mobility#readme"
+  "scripts": {
+    "cp": "cp.js",
+    "routing": "routing.js"
+  
+},  
+  "homepage": "https://github.com/DolceLemus/cambridge_mobility#readme"
 }
