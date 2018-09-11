@@ -47,9 +47,9 @@
                         <div class="box-description col-md-5 text-center p-3 m-auto">
                             <div class="weather mb-2 font-weight-bold" href="">
                                 <div class="col-md-12 text-center d-inline">
-                                    <div class="font-weight-bold"d="box">
-                                        <h3 id="city">...</h3>
-                                        <i class="fa fa-thermometer-half pr-2" aria-hidden="true"></i><h3 id="temp"></h3>
+                                    <div id="box" class="box-weather font-weight-bold col-md-12 text-center d-inline">
+                                        <h3 id="city" class="text-city white-text">...</h3>
+                                        <i class="fa fa-thermometer-half pr-2" aria-hidden="true"></i><span id="temp" class="white-text"></span>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
             <div class="row weather font-weight-bold text-items-center m-auto p-1">
                 <div id="box" class="box-weather font-weight-bold col-md-12 text-center d-inline">
                     <h3 id="city2" class="text-city">...</h3>
-                    <i class="fa fa-thermometer-half pr-2" aria-hidden="true"></i><span id="temp2"></span>
+                    <i id="icon-weather" class="fa fa-thermometer-half pr-2" aria-hidden="true"></i><span id="temp2"></span>
                 </div>
             </div>
             <!-- /Weather-->
@@ -144,7 +144,7 @@
     
                     <!--Routes-->
                     <div class="row routes text-items-center text-center pt-2 pb-2 mr-2 mñ-2" id="table-routes">
-                        <!--<div class="col-md-10 box-routes text-items-center d-inline m-auto ">
+                        <!--<div class="col-md-10 box-routes text-items-center d-inline m-auto">
                             <h4 class="text-route font-weight-bold mt-2">Route</h4>
                             <p class="address text-left pl-4">address</p>
                             <p class="distance text-left pl-4">km</p>
@@ -157,7 +157,7 @@
                 </div>
     
                 <!--MAP FROM GOOGLE.MAPS-->
-                <div id="map" class="container-map col-md-7 img-fluid" style="height:auto;"></div>
+                <div id="map" class="container-map col-md-7 img-fluid"></div>
                 <!--/MAP-->
     
             </div>

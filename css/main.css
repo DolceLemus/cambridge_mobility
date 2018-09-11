@@ -18,6 +18,8 @@ body {
 
 .box {
   margin-top: 20vh; }
+  .box i {
+    color: #f0ab00; }
 
 .box-welcome {
   background-color: rgba(157, 176, 172, 0.7);
@@ -33,11 +35,8 @@ body {
   color: #ffffff;
   font-size: 120%; }
 
-.weather {
-  color: #ffffff;
-  font-size: 120%; }
-  .weather i {
-    color: #f0ab00; }
+.box-weather .fa-thermometer-half {
+  color: #f0ab00; }
 
 @media (max-width: 740px) {
   .container-fluid {
@@ -66,7 +65,7 @@ body {
 .box-weather {
   color: #3c1053;
   font-size: 130%; }
-  .box-weather i {
+  .box-weather #icon-weather {
     color: #d0006f;
     font-size: 150%; }
 
@@ -77,7 +76,7 @@ body {
     .profile .box-profile .user-photo {
       border-radius: 50%;
       border: 1px solid #d0006f;
-      max-width: 50%; }
+      max-width: 30%; }
 
 .logout-button {
   border-radius: 5px;
@@ -116,15 +115,20 @@ body {
 
 .routes .more {
   color: #d0006f; }
-.routes .box-routes h4, .routes .box-routes p {
+.routes .box-routes h4 {
   color: #830051; }
 
+@media (max-width: 740px) {
+  .more-btn {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 2rem;
+    margin-left: 1rem; } }
 .container-map {
   border: 4px solid #f0ab00;
   height: auto; }
 
 @media (max-width: 740px) {
   .container-map {
-    max-height: 320px; } }
+    overflow: visible !important; } }
 
 /*# sourceMappingURL=main.css.map */
