@@ -1,11 +1,12 @@
 
 //Validate Cp 
-
 const validateCp=()=>{
-    let cp="CB10AP";
-    const regex=/^([Cc][Bb]1[0-1][A-Za-z]{2})$/;
+    let cp="CB22 3AT";
+    const regex=/^([A-Za-z]{2}[0-9]{1,2}\s[0-9][A-Za-z]{2})$/;
         console.log(regex);
     if (regex.exec(cp) != null){
+        let cpWithSpace=cp.replace(" ","%20");
+        console.log(cpWithSpace);
         getLocationCp(cp);
         return true;
     }
@@ -14,12 +15,9 @@ const validateCp=()=>{
         return false;
     }      
 }
-
 const getLocationCp=(dataCp)=>{
-    let address="CB223AT"
-    
     const getCpCoords = new XMLHttpRequest();
-    getCpCoords.open('GET', `https://maps.googleapis.com/maps/api/geocode/json?address=CB7%204BS&key=AIzaSyCeUaZbq5ia_ArGo-r-2bV33u8fvRs1x8k`);
+    getCpCoords.open('GET', `https://maps.googleapis.com/maps/api/geocode/json?address=${dataCp}`);
     getCpCoords.onload = getGeolocation;
     getCpCoords.onerror = handleError;
     getCpCoords.send();
@@ -28,17 +26,15 @@ const getLocationCp=(dataCp)=>{
 function getGeolocation(){
     console.log(this.responseText);
     const data = JSON.parse(this.responseText);
-    
-    /*if(navigator.geolocation){
-        navigator.geolocation.getcurrentposition(userUbication=()=>{
-            let ubication={
-                lat:cp.coords.latitude,
-                lng:cp.coords.longitude
-            }
-            console.log(ubication);
-            drawMap(ubication);
+    let results=data.results;
+    results.forEach(element => {
+       console.log(element.geometry.location);
+       let ubication={
+        lat:element.geometry.location.lat,
+        lng:element.geometry.location.lng
         }
-    }*/
+        drawMap(ubication)
+    });
 }
 const handleError=() =>{
     console.log('Se ha presentado un error');
