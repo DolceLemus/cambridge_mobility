@@ -62,7 +62,7 @@ const drawMap=(objUbication)=>{
     return cpMaker.setMap(map);
 }
 validateCp();
-module.exports = validateCp;
+// module.exports = validateCp;
 
 
 
