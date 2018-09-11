@@ -1,13 +1,13 @@
 'use strict'; //Validate Cp 
 //CP=CB2 0AA
-// $("#search").click(function (event) {
-//     event.preventDefault();
-// var cp = $("#input-value").val();
-// console.log(cp);
-// var optionSelect = $("#selected").val();
-// console.log(optionSelect);
-//     validateCp(cp);
-// })
+$("#search").click(function (event) {
+    event.preventDefault();
+var cp = $("#input-value").val();
+console.log(cp);
+var optionSelect = $("#selected").val();
+console.log(optionSelect);
+    validateCp(cp);
+})
 
 // var validateCpCambridge = function validateCpCambridge() {
  
