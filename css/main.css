@@ -116,9 +116,14 @@ body {
 
 .routes .more {
   color: #d0006f; }
-.routes .box-routes h4, .routes .box-routes p {
+.routes .box-routes h4 {
   color: #830051; }
 
+@media (max-width: 740px) {
+  .more {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 2rem;
+    margin-left: 1rem; } }
 .container-map {
   border: 4px solid #f0ab00;
   height: auto; }

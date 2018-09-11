@@ -56,13 +56,13 @@ function initMap() {
   }
 
 const templateRouts=(address,distance,time)=>{
-  var template='<div class="col-md-10 box-routes text-items-center d-inline m-auto ">'+
+  var template='<div class="col-md-10 font-weight-bold box-routes d-inline mb-2">'+
       '<h4 class="text-route font-weight-bold mt-2">ROUT</h4>'+
-      '<p class="address text-left pl-4">'+address+'</p>'+
-      '<p class="distance text-left pl-4">'+distance+'</p>'+
-      '<p class="time text-left pl-4">'+time+'</p>'+
+      '<p class="address text-left pl-4"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>'+address+'</p>'+
+      '<span class="distance pl-4">'+distance+'</span>'+
+      '<span class="time pl-4">'+time+'</span>'+
   '</div>'+
-  '<a class="more col-md-2 b-none  font-weight-bold text-items-center text-center" href="#">More</a>'
+  '<a class="more col-md-2 b-none font-weight-bold text-items-center text-center" href="#">More</a>'
 return template;  
 }
 // module.exports = routing;
