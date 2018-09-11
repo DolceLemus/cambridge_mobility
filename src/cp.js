@@ -1,5 +1,11 @@
 'use strict';
 //Validate Cp 
+var datadestiny = [
+    {
+      "lat": "52.132509",
+      "lng": "0.1390254"
+    }];
+  
 
 const validateCp=()=>{
     let cp="CB22 3AT";
@@ -54,8 +60,6 @@ const drawMap=(objUbication)=>{
  })
     return cpMaker.setMap(map);
 }
-
-  
 validateCp();
 module.exports = validateCp;
 
