@@ -5,9 +5,14 @@ body
 
 .mask
     @include bgimage (map)
+    height: 100vh
 
 .container-fluid
     background-color: rgba($dark, 0.5)
+    height: 100vh
+
+.box
+    margin-top: 20vh
 
 .box-welcome
     background-color: rgba($platinum, 0.7)
@@ -30,5 +35,7 @@ body
         color: $gold
 
 @media (max-width: 740px)
-    .view
-        height: 600px
+    .box
+        margin-top: 0
+    .box-description
+        margin-top: 6rem
