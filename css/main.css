@@ -1,0 +1,64 @@
+/* Colors */
+/*Fonts */
+/*Radius */
+/*BG-IMG function */
+body {
+  font-family: Roboto, Sans-serif; }
+
+.mask {
+  background-image: url("../assets/images/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; }
+
+.container-login {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh; }
+
+.box {
+  margin-top: 20vh; }
+
+.box-welcome {
+  background-color: rgba(157, 176, 172, 0.7);
+  border-radius: 5px; }
+
+.hr-light {
+  color: #f0ab00; }
+
+.welcome-text, .know-journey {
+  color: #003865; }
+
+.text-description {
+  color: #ffffff;
+  font-size: 120%; }
+
+.weather {
+  color: #ffffff;
+  font-size: 120%; }
+  .weather i {
+    color: #f0ab00; }
+
+@media (max-width: 740px) {
+  .container-fluid {
+    height: auto; }
+
+  .mask {
+    height: auto; }
+
+  .box {
+    margin-top: 0; }
+
+  .box-description {
+    margin-top: 5rem; } }
+.principal-container {
+  background-color: rgba(157, 176, 172, 0.8);
+  border: 2px solid #3c1053; }
+
+.navbar {
+  background-color: #3c1053; }
+
+.profile {
+  border: 1px solid #d0006f; }
+
+/*# sourceMappingURL=main.css.map */

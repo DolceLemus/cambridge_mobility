@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
     <title>Cambridge Mobility</title>
+    <!-- bootstrap develop -->
+    <link rel="stylesheet" href="css/assets/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -16,12 +18,109 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+                        <!--       FIRST VIEW - AUTHENTICATION       -->
 
-    <input type="text" id="codigo" />
-    <button onclick="validarCodigoPostal()">validar</button>
+    <header id="first-view" class="h-auto">
+        <!-- Intro Section -->
+        <div class="mask rgba-black-light w-100 align-items-stretch">
+            <div class="full-bg-img">
+                <div class="container-login container-fluid p-3">
+                    <div class="box row p-3 mt-10 align-items-center">
+
+                        <div class="box-welcome col-md-6">
+                            <div class="text-center">
+                                <h1 class="welcome-text text-uppercase h1-reponsive font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s">
+                                    <strong>Welcome</strong>
+                                </h1>
+                                
+                                <img class="img-fluid m-auto" src="assets/images/JourneyPlanner@2x.png" alt="logo-journeyPlanner">
+                                
+                                <hr class="welcome-text mt-2 wow fadeInDown" data-wow-delay="0.4s">
+                                
+                                <p class="know-journey mb-5 text-uppercase font-italic font-weight-bold text-center wow fadeInDown" data-wow-delay="0.4s">
+                                    Do you know what´s Journey Planner?
+                                </p>
+
+                                <a class="btn btn-amber mb-3" data-wow-delay="0.4s">LogIn Google</a>
+                            </div>
+                        </div>
+
+                        <div class="box-description col-md-5 text-center p-3 m-auto">
+                            <div class="weather mb-2 font-weight-bold" href=""><i class="fa fa-thermometer-half pr-2" aria-hidden="true"></i>Weather</div>
+                            <hr>
+                            <p class="text-description">Journey Planner is an app that will allow you to go from your current
+                            location to your destination through different alternate routes, knowing your estimated time of arrival,
+                            distance and even the weather, so you can choose your best option in a smoothly way.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- /FIRST VIEW: AUTHENTICATION-->
+
+
+                        <!--     SECOND VIEW - ROUTES      -->
+    <main>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg text-items-center m-auto">
+            <div class="container m-auto p-1">
+                <!-- Navbar brand -->
+                <a class="col-md-12 text-center m-auto navbar-brand px-lg-4 mr-0" href="#first-view">
+                    <img class="img-fluid" src="assets/images/JourneyPlanner.png" height="30" alt="logo-journeyPlanner">
+                </a>
+            </div>
+        </nav>
+        <!--/Navbar-->
+    
+        <!--Section-->
+        <section class="principal-container container-fluid text-items-center px-2 py-4">
+            <div class="row m-auto p-2">
+                <div class="col-md-4">
+    
+                    <!--Profile-->
+                    <div class="row profile">
+                        <div class="box-profile col-md-12">
+                            <img class="user-photo col-md-4" src="photo" alt="photo-profile">
+                            <p class="user-name col-md-8">User name</p>
+                        </div>
+                    </div>
+                    <!--/profile-->
+    
+                    <!--Form-->
+                    <div class="row form">
+                        <div class="box-form col-md-12">
+    
+                        </div>
+                    </div>
+                    <!--/form-->
+    
+                    <!--Routes-->
+                    <div class="row routes">
+                        <div class="box-routes col-md-12">
+    
+                        </div>
+                    </div>
+                    <!--/routes-->
+    
+                </div>
+    
+                <!--MAP FROM GOOGLE.MAPS-->
+                <div id="map" class="col-md-8 img-fluid p-2" style="height: 100vh;"></div>
+                <!--/MAP-->
+    
+            </div>
+        </section>
+        <!--/section-->
+    </main>
 
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- bootstrap js/src -->
+    <script type="text/javascript" src="./src/assets/bootstrap.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
@@ -29,10 +128,11 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/js/mdb.min.js"></script>
     <!--JS-->
-    <!--<script src="./js/app.js"></script>-->
-    <script src="./src/app.js"></script>
-    <script src="./src/cp.js"></script>
-    <script src="./src/routing.js"></script>
 
+    <!--<script src="./js/app.js"></script>-->
+    <!--<script src="./src/app.js"></script>-->
+    <script src="./src/cp.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeUaZbq5ia_ArGo-r-2bV33u8fvRs1x8k"></script>
+    <!--<script src="./src/routing.js"></script>-->
 </body>
 </html>
