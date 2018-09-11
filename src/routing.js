@@ -1,3 +1,4 @@
+
 'use strict';
 /*
 var dataOrigin =
@@ -13,22 +14,37 @@ var dataOrigin =
     event.preventDefault();
     
 })
+// 'use strict';
 
+// import getGeolocation from './cp'
+
+// var dataOrigin =
+//   {
+//     lat: 52.1725291,
+//     lng: 0.1340254
+//   };
+
+// var dataDestiny =
+//   {
+//     lat: 52.132509,
+//     lng: 0.1390254
+//   };
 */
 function initMap() {
-    let directionsService = new google.maps.DirectionsService;
+    window.directionsService = new google.maps.DirectionsService;
     console.log(directionsService);
     let directionsDisplay = new google.maps.DirectionsRenderer;
     let containerMap = document.getElementById('map');
-    let map = new google.maps.Map(containerMap,{
+    window.map = new google.maps.Map(containerMap,{
       zoom: 0.5,
       center: {lat:52.1920702 , lng: 0.1334396}
     });
     directionsDisplay.setMap(map);
 
-    calculateAndDisplayRoute(directionsService,directionsDisplay,map);
+    //calculateAndDisplayRoute(directionsService,directionsDisplay,map);
+    // getGeolocation();
   }
-  function calculateAndDisplayRoute(directionsService,directionsDisplay,map) {
+  function calculateAndDisplayRoute(dataOrigin, dataDestiny) {
     directionsService.route({
       origin: dataOrigin,
       destination: dataDestiny,
@@ -36,22 +52,25 @@ function initMap() {
       provideRouteAlternatives: true
     }, function(response, status){
       if (status === 'OK') {
-
         for (var i = 0, len = response.routes.length; i < len; i++) {
           new google.maps.DirectionsRenderer({
               map: map,
               directions: response,
               routeIndex: i
           });
+          console.log(response.routes);
           response.DirectionsResult;
+          
           let address=response.routes[i].summary;
-          console.log(address);
-         console.log((response));
+          // console.log(address);
+          // console.log((response));
           let distance=(response.routes[i].legs[0].distance.text);
-          console.log(distance);
+          // console.log(distance);
           let time=(response.routes[i].legs[0].duration.text);
           console.log(time);
-          $('#table-routes').append(templateRouts(address,distance,time));
+          let addressStart = (response.routes["0"].legs["0"].start_address);
+          let addressEnd = (response.routes["0"].legs["0"].end_address);
+          $('#table-routes').append(templateRouts(address,distance,time,addressStart,addressEnd));
       }
       } else {
         window.alert('Directions request failed due to ' + status);
@@ -59,52 +78,44 @@ function initMap() {
     })
   }
 
-const templateRouts=(address,distance,time)=>{
-  var template=
-  `<div class="col-md-10 box-routes text-items-center d-inline m-auto ">
-     <h4 class="text-route font-weight-bold mt-2">ROUT</h4>
-     <p class="address text-left pl-4">${address}</p>
-     <p class="distance text-left pl-4">${distance}</p>
-     <p class="time text-left pl-4">${time}</p>
- </div>
+const templateRouts=(address,distance,time,addressStart,addressEnd)=>{
+  var template=`<div class="col-md-10 font-weight-bold box-routes d-inline mb-2">
+      <h4 class="text-route font-weight-bold mt-2">ROUT</h4>
+      <p class="address text-center text-left pl-4"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>${address}</p>
+      <span class="distance pl-4">${distance}</span>
+      <span class="time pl-4">${time}</span>
+  </div>
+  <div class="more-btn text-center font-weight-bold text-items-center m-auto">
+    <a class="more btn btn.default btn.rounded col-md-2 b-none font-weight-bold text-items-center text-center" data-toggle="modal" data-target="#sideModalTLInfo">More Details<i class="fa fa-arrow-right pl-2" aria-hidden="true"></i></a>
+  </div>
+  
  <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">
         <!--Content-->
         <div class="modal-content">
             <!--Header-->
             <div class="modal-header">
-                <p class="heading lead">Modal Info</p>
+                <p class="heading lead">Route Information</p>
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" class="white-text">&times;</span>
                 </button>
             </div>
 
-            <!--Body-->
+            <!--Body: Card-->
             <div class="modal-body">
-
-                <img src="https://mdbootstrap.com/wp-content/uploads/2016/11/admin-dashboard-bootstrap.jpg" alt="" class="img-fluid">
-
                 <div class="text-center">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt vero illo error eveniet cum.</p>
+                  <p class="distance text-left pl-4">Distancia: ${distance}</p>
+                  <p class="time text-left pl-4">Tiempo: ${time}</p>
+                  <p class="time text-left pl-4">Dirección de Origen: ${addressStart}</p> 
+                  <p class="time text-left pl-4">Dirección de Llegada: ${addressEnd}</p>                  
                 </div>
             </div>
-
-            <!--Footer-->
-            <div class="modal-footer justify-content-center">
-                <a type="button" class="btn btn-primary">Get it now <i class="fa fa-diamond ml-1"></i></a>
-                <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">No, thanks</a>
-            </div>
         </div>
-        <!--/.Content-->
+
     </div>
 </div>
-<!-- Central Modal Medium Info-->
-
-<div class="text-center">
-    <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo">Launch Modal Info <i class="fa fa-eye ml-1"></i></a>
-</div>
- `
+<!-- Central Modal Medium Info-->`
 
 return template;  
 }

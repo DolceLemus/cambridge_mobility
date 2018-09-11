@@ -1,5 +1,5 @@
 'use strict';
-//Validate Cp 
+//Validate
 //CP=CB2 OAA
 var data = [
     {
@@ -51,13 +51,17 @@ var data = [
       "description": "Saffron Walden CB10 1TS, UK",
     }
   ]
+
 $("#search").click(function (event) {
     event.preventDefault();
     var cp = $("#input-value").val();
     console.log(cp);
     var optionSelect = $("#selected").val();
     campusSelected(optionSelect);
+    console.log(optionSelect);
     validateCp(cp);
+
+    
 })
 
 const campusSelected=()=>{
@@ -77,6 +81,7 @@ const campusSelected=()=>{
      console.log(dataDestiny);
 }
 
+
 const validateCp = (cp) => {
     const regex = /^([A-Za-z]{2}[0-9]{1,2}\s[0-9][A-Za-z]{2})$/;
     console.log(regex);
@@ -84,51 +89,45 @@ const validateCp = (cp) => {
         let cpWithSpace = cp.replace(" ", "%");
         console.log(cpWithSpace);
         getLocationCp(cp);
-        return true;
+        console.log("cp correcto");
+        return true;        
     }
     else {
         // alert("zip code invalidate");
+        console.log("cp incorrecto!!!");
         return false;
+        
     }
 }
 const getLocationCp = (dataCp) => {
+    console.log(dataCp);
     const getCpCoords = new XMLHttpRequest();
     getCpCoords.open('GET', `https://maps.googleapis.com/maps/api/geocode/json?address=${dataCp}`);
     getCpCoords.onload = getGeolocation;
     getCpCoords.onerror = handleError;
     getCpCoords.send();
 }
-// Geolocation Function
+// Geolocation Function te reforna el objeto !! lat y long
 function getGeolocation() {
-    console.log(this.responseText);
+    let ubication;
+    // console.log(this.responseText);
     const data = JSON.parse(this.responseText);
     let results = data.results;
     results.forEach(element => {
         console.log(element.geometry.location);
-        let ubication = {
+        ubication = {
             lat: element.geometry.location.lat,
             lng: element.geometry.location.lng
         }
-        drawMap(ubication)
+
     });
+    calculateAndDisplayRoute(ubication, dataDestiny);
 }
 const handleError = () => {
     console.log('Se ha presentado un error');
 }
 
-const drawMap = (objUbication) => {
-    let containerMap = document.getElementById("map");
-    console.log(objUbication);
-    let map = new google.maps.Map(containerMap, {
-        center: objUbication,
-        zoom: 4
-    })
-    let cpMaker = new google.maps.Marker({
-        position: objUbication,
-        title: "CP"
-    })
-    return cpMaker.setMap(map);
-}
+// console.log(ubication);
 
 
 
