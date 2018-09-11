@@ -119,9 +119,8 @@ body {
   color: #830051; }
 
 @media (max-width: 740px) {
-  .more-btn {
+  .more-details {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 2rem;
     margin-left: 1rem; } }
 .container-map {
   border: 4px solid #f0ab00;
@@ -129,6 +128,6 @@ body {
 
 @media (max-width: 740px) {
   .container-map {
-    overflow: visible !important; } }
+    min-height: 300px; } }
 
 /*# sourceMappingURL=main.css.map */
