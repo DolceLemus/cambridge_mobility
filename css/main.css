@@ -12,7 +12,7 @@ body {
   background-position: center;
   height: 100vh; }
 
-.container-fluid {
+.container-login {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100vh; }
 
@@ -51,7 +51,14 @@ body {
 
   .box-description {
     margin-top: 5rem; } }
+.principal-container {
+  background-color: rgba(157, 176, 172, 0.8);
+  border: 2px solid #3c1053; }
+
 .navbar {
   background-color: #3c1053; }
+
+.profile {
+  border: 1px solid #d0006f; }
 
 /*# sourceMappingURL=main.css.map */
