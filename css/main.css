@@ -77,7 +77,7 @@ body {
     .profile .box-profile .user-photo {
       border-radius: 50%;
       border: 1px solid #d0006f;
-      max-width: 50%; }
+      max-width: 30%; }
 
 .logout-button {
   border-radius: 5px;
