@@ -39,15 +39,18 @@ function initMap() {
               directions: response,
               routeIndex: i
           });
+          console.log(response.routes);
           response.DirectionsResult;
           let address=response.routes[i].summary;
-          console.log(address);
-         console.log((response));
+          // console.log(address);
+          // console.log((response));
           let distance=(response.routes[i].legs[0].distance.text);
-          console.log(distance);
+          // console.log(distance);
           let time=(response.routes[i].legs[0].duration.text);
           console.log(time);
-          $('#table-routes').append(templateRouts(address,distance,time));
+          let addressStart = (response.routes["0"].legs["0"].start_address);
+          let addressEnd = (response.routes["0"].legs["0"].end_address);
+          $('#table-routes').append(templateRouts(address,distance,time,addressStart,addressEnd));
       }
       } else {
         window.alert('Directions request failed due to ' + status);
@@ -55,7 +58,7 @@ function initMap() {
     })
   }
 
-const templateRouts=(address,distance,time)=>{
+const templateRouts=(address,distance,time,addressStart,addressEnd)=>{
   var template=`<div class="col-md-10 font-weight-bold box-routes d-inline mb-2">
       <h4 class="text-route font-weight-bold mt-2">ROUT</h4>
       <p class="address text-center text-left pl-4"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>${address}</p>
@@ -84,6 +87,8 @@ const templateRouts=(address,distance,time)=>{
                 <div class="text-center">
                   <p class="distance text-left pl-4">Distancia: ${distance}</p>
                   <p class="time text-left pl-4">Tiempo: ${time}</p>
+                  <p class="time text-left pl-4">Dirección de Origen: ${addressStart}</p> 
+                  <p class="time text-left pl-4">Dirección de Llegada: ${addressEnd}</p>                  
                 </div>
             </div>
         </div>
