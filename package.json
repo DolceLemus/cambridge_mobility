@@ -1,19 +1,26 @@
 {
   "name": "cambridge_mobility",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "babel-cli": "^6.26.0",
-    "babel-install": "^2.1.0"
+    "babel-preset-env": "^1.7.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "auth": "node src/auth.js",
     "start": "node src/app.js",
     "cp": "node src/cp.js",
-    "routing": "node src/routing.js"
+    "routing": "node src/routing.js",
+    "build": "babel src -d dist",
+    "authB": "babel src/auth.js -o dist/auth.js",
+    "startB": "babel src/app.js -o dist/app.js",
+    "cpB": "babel src/cp.js -o dist/cp.js",
+    "routinghB": "babel src/routing.js -o dist/routing.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +31,6 @@
   "bugs": {
     "url": "https://github.com/DolceLemus/cambridge_mobility/issues"
   },
-  "homepage": "https://github.com/DolceLemus/cambridge_mobility#readme"
+  "homepage": "https://github.com/DolceLemus/cambridge_mobility#readme",
+  "description": ""
 }
