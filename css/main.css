@@ -55,7 +55,7 @@ body {
   .box-description {
     margin-top: 5rem; } }
 .principal-container {
-  background-color: rgba(157, 176, 172, 0.8);
+  background-color: rgba(157, 176, 172, 0.5);
   border: 1px solid #3c1053; }
 
 .box-data {
@@ -65,6 +65,9 @@ body {
 
 .weather {
   width: 100%; }
+
+.logo a .img-logo {
+  font-size: 150%; }
 
 .box-weather {
   color: #3c1053;
@@ -79,14 +82,14 @@ body {
     color: #3c1053; }
     .profile .box-profile .user-photo {
       border-radius: 50%;
-      border: 1px solid #d0006f;
+      border: 1px solid #ffffff;
       max-width: 30%; }
 
 .logout-button {
+  background-color: rgba(157, 176, 172, 0.1);
   border-radius: 5px;
-  background-color: rgba(208, 0, 111, 0.75);
-  border: 1px solid #f0ab00;
-  color: #f0ab00; }
+  border: 1px solid rgba(157, 176, 172, 0.1);
+  color: #003865; }
 
 @media (max-width: 740px) {
   .user-photo {

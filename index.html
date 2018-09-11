@@ -70,20 +70,22 @@
         <!--Section-->
         <section class="principal-container container-fluid text-items-center px-2 py-4">
 
-            <!-- Weather-->
-            <div class="row weather font-weight-bold text-items-center m-auto p-1 d-inline-block">
-                <div class="logo float-left">
-                    <a class="col-md-12 text-center m-auto navbar-brand px-lg-4 mr-0" href="#first-view">
-                        <img class="img-fluid" src="assets/images/JourneyPlanner.png" height="30" alt="logo-journeyPlanner">
-                    </a>
+            <!-- header-->
+            <header>
+                <div class="row weather font-weight-bold text-items-center m-auto p-1 d-inline-block">
+                    <div class="logo float-left">
+                        <a class="col-md-12 text-center m-auto navbar-brand px-lg-4 mr-0" href="#first-view">
+                            <img class="img-logo img-fluid" src="assets/images/JourneyPlanner.png" height="30" alt="logo-journeyPlanner">
+                        </a>
+                    </div>
+                    <div id="box" class="box-weather font-weight-bold text-center float-right">
+                        <span id="city2" class="text-city pr-2 ">...</span>
+                        <i id="icon-weather" class="fa fa-thermometer-half pr-1" aria-hidden="true"></i>
+                        <span id="temp2"></span>
+                    </div>
                 </div>
-                <div id="box" class="box-weather font-weight-bold text-center float-right">
-                    <h3 id="city2" class="text-city">...</h3>
-                    <i id="icon-weather" class="fa fa-thermometer-half pr-2" aria-hidden="true"></i><span id="temp2"></span>
-                </div>
-            </div>
-            <!-- /Weather-->
-
+            </header>
+            <!-- /header-->
             <hr>
 
             <div class="row m-auto p-2">
@@ -94,7 +96,7 @@
                         <div class="box-profile col-md-12 d-inline text-center">
                             <img class="user-photo" src=""  id="foto-perfil" alt="photo-profile">
                             <p class="user-name text-uppercase font-weight-bold mt-2 mb-2" id="nombre-perfil">User name</p>
-                            <button id="logout" type="submit" class="logout-button text-center font-weight-bold pt-1 pb-1 pl-2 pr-2">Log Out</button>
+                            <button id="logout" type="submit" class="logout-button text-center font-weight-bold pt-1 pb-1 pl-2 pr-2"><i class="fa fa-mail-reply pr-2" aria-hidden="true"></i>Log Out</button>
                         </div>
                     </div>
                     <!--/profile-->
