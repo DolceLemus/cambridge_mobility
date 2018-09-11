@@ -77,6 +77,15 @@
     
         <!--Section-->
         <section class="principal-container container-fluid text-items-center px-2 py-4">
+            <!--container-principal: Weather-->
+            <div class="row weather-principal-container font-weight-bold  text-items-center m-auto p-1">
+                <div class="col-md-12 text-center">
+                    <i class="fa fa-thermometer-half pr-2" aria-hidden="true"></i>Weather
+                </div>
+            </div>
+
+            <hr>
+
             <div class="row m-auto p-2">
                 <div class="box-data col-md-5">
     
@@ -92,26 +101,29 @@
 
                     <hr>
 
-                    <!--Form-->
+                    <!--form-->
                     <form class="row form md-form text-items-center text-center pt-2 pb-2">
-                    
+                        <!--BOX FORM-->
                         <div class="box-form col-md-12 text-items-center d-inline m-auto">
-                            <a class="pt-1 pb-1">
+                            <!--INPUT ZIPCODE-->
+                            <a class="input-zip-code pt-1 pb-1">
                                 <i class="fa fa-address-card-o pr-1" aria-hidden="true"></i>
                                 <input class="font-weight-bold black-text" type="text" placeholder="Type your ZipCode">
                             </a>
-                            <select class=" text-items-center d-inline mt-3 pt-1 pb-1" name="" id="">
-                                <option value="">Campus 1</option>
-                                <option value="">Campus 2</option>
-                                <option value="">Campus 3</option>
-                                <option value="">Campus 4</option>
-                                <option value="">Campus 5</option>
-                                <option value="">Campus 6</option>
+                            <!--SELECT CAMPUS-->
+                            <select class="select-campus text-items-center text-center d-inline mt-3 p-1" name="" id="">
+                                <option class="campus pt-1 pb-1" value="">Campus 1</option>
+                                <option class="campus pt-1 pb-1" value="">Campus 2</option>
+                                <option class="campus pt-1 pb-1" value="">Campus 3</option>
+                                <option class="campus pt-1 pb-1" value="">Campus 4</option>
+                                <option class="campus pt-1 pb-1" value="">Campus 5</option>
+                                <option class="campus pt-1 pb-1" value="">Campus 6</option>
                             </select>
                         </div>
                     
-                        <div class="box-select col-md-12 text-items-center d-inline mt-2">
-                            <button type="submit">SEARCH</button>
+                        <!--Button SEARCH-->
+                        <div class="box-select col-md-12 text-items-center d-inline mt-5">
+                            <button class="btn-search text-center font-weight-bold pt-1 pb-1 pl-2 pr-2" type="submit">SEARCH</button>
                         </div>
                     </form>
                     <!--/form-->
@@ -121,24 +133,31 @@
                     <!--Routes-->
                     <div class="row routes text-items-center text-center pt-2 pb-2 mr-2 mñ-2">
                         <div class="col-md-10 box-routes text-items-center d-inline m-auto ">
-                            <h4 class="route font-weight-bold black-text">Route</h4>
+                            <h4 class="text-route font-weight-bold mt-2">Route</h4>
                             <p class="distance text-left pl-4">km</p>
                             <p class="time text-left pl-4">minutes</p>
                         </div>
-                        <a class="col-md-2 b-none text-items-center " href="#">More</a>
+                        <a class="more col-md-2 b-none  font-weight-bold text-items-center text-center" href="#">More</a>
                     </div>
                     <!--/routes-->
     
                 </div>
     
                 <!--MAP FROM GOOGLE.MAPS-->
-                <div id="map" class="col-md-7 img-fluid p-2" style="height: 100vh;"></div>
+                <div id="map" class="container-map col-md-7 img-fluid" style="height: 100vh;"></div>
                 <!--/MAP-->
     
             </div>
         </section>
         <!--/section-->
     </div>
+
+    <div id="box">
+            <h3 id="city">...</h3>
+            <h3 id="temp">
+                <span>&deg;</span> ... </h3>
+        </div>
+    
 
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -156,6 +175,8 @@
     <!--JS-->
     <!--<script src="./js/app.js"></script>-->
     <!--<script src="./src/app.js"></script>-->
+    <script src="./src/weather.js"></script>
+    <script src="./src/cp.js"></script>
     <script src="./src/routing.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeUaZbq5ia_ArGo-r-2bV33u8fvRs1x8k"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeUaZbq5ia_ArGo-r-2bV33u8fvRs1x8k&callback=initMap">
