@@ -1,4 +1,4 @@
-
+'use strict';
 //Validate Cp 
 const validateCp=()=>{
     let cp="CB22 3AT";
@@ -53,4 +53,11 @@ const drawMap=(objUbication)=>{
  })
     return cpMaker.setMap(map);
 }
+
+  
 validateCp();
+
+module.exports = validateCp;
+
+
+
