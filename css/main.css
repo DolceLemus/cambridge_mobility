@@ -55,9 +55,15 @@ body {
   background-color: rgba(157, 176, 172, 0.8);
   border: 2px solid #3c1053; }
 
+.weather-principal-container {
+  color: #3c1053; }
+  .weather-principal-container i {
+    color: #d0006f;
+    font-size: 150%; }
+
 .box-data {
-  background-color: rgba(240, 171, 0, 0.35);
-  border: 2px solid rgba(240, 171, 0, 0.15); }
+  background-color: rgba(240, 171, 0, 0.7);
+  border: 3px solid #f0ab00; }
 
 .navbar {
   background-color: #3c1053; }
@@ -70,5 +76,30 @@ body {
     max-height: 5rem;
     max-width: 5rem;
     margin-bottom: 2rem; }
+
+.input-zip-code i {
+  color: #830051;
+  font-size: 150%; }
+
+.select-campus {
+  border-radius: 5px;
+  background-color: rgba(131, 0, 81, 0.8);
+  border: 1px solid #f0ab00;
+  color: #f0ab00; }
+  .select-campus .campus {
+    background-color: rgba(131, 0, 81, 0.4);
+    color: #c4d600;
+    padding: 1rem; }
+    .select-campus .campus:hover {
+      background-color: rgba(60, 16, 83, 0.5);
+      color: #68d2df; }
+
+.btn-search {
+  border-radius: 5px;
+  background-color: #3c1053;
+  border: 1px solid #f0ab00;
+  color: #f0ab00; }
+  .btn-search:hover {
+    border: 2px solid rgba(240, 171, 0, 0.5); }
 
 /*# sourceMappingURL=main.css.map */
