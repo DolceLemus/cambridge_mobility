@@ -9,10 +9,15 @@ body {
   background-image: url("../assets/images/map.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  height: 100vh; }
 
 .container-fluid {
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh; }
+
+.box {
+  margin-top: 20vh; }
 
 .box-welcome {
   background-color: rgba(157, 176, 172, 0.7);
@@ -35,7 +40,10 @@ body {
     color: #f0ab00; }
 
 @media (max-width: 740px) {
-  .view {
-    height: 600px; } }
+  .box {
+    margin-top: 0; }
+
+  .box-description {
+    margin-top: 6rem; } }
 
 /*# sourceMappingURL=main.css.map */

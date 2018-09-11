@@ -36,4 +36,9 @@ function initMap() {
       }
     });
   }
-module.exports = ;
+const routing = () => {
+console.log("app");
+}
+
+routing();
+module.exports = routing ;
