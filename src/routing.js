@@ -1,44 +1,62 @@
 'use strict';
+var dataOrigin =
+  {
+    lat: 52.1725291,
+    lng: 0.1340254
+  };
 
-const rutingLocation=(valueSelect)=>{
+var dataDestiny =
+  {
+    lat: 52.132509,
+    lng: 0.1390254
+  };
+
+/*const rutingLocation=()=>{
     const getDestiny = new XMLHttpRequest();
-    getDestiny .open('GET', `https://maps.googleapis.com/maps/api/js?key=AIzaSyCeUaZbq5ia_ArGo-r-2bV33u8fvRs1x8k`);
-    getDestiny .onload = initMap;
+    getDestiny .open('GET',`https://maps.googleapis.com/maps/api&key=AIzaSyCeUaZbq5ia_ArGo-r-2bV33u8fvRs1x8k/Json`);
+    getDestiny .onload =initMap;
     getDestiny .onerror = handleError;
     getDestiny .send();
   }
+  const handleError=() =>{
+    console.log('Se ha presentado un error');
+  }
+*/
 function initMap() {
-    var directionsService = new google.maps.DirectionsService;
-    var directionsDisplay = new google.maps.DirectionsRenderer;
-    var map = new google.maps.Map(document.getElementById('map'), {
+    let directionsService = new google.maps.DirectionsService;
+    console.log(directionsService);
+    let directionsDisplay = new google.maps.DirectionsRenderer;
+    let containerMap=document.getElementById('map');
+    let map = new google.maps.Map(containerMap,{
       zoom: 7,
-      center: {lat: 41.85, lng: -87.65}
+      center: {lat:52.1920702 , lng: 0.1334396}
     });
     directionsDisplay.setMap(map);
-
-    var onChangeHandler = function() {
-      calculateAndDisplayRoute(directionsService, directionsDisplay);
-    };
-    document.getElementById('start').addEventListener('change', onChangeHandler);
-    document.getElementById('end').addEventListener('change', onChangeHandler);
+    calculateAndDisplayRoute(directionsService,directionsDisplay);
   }
 
-  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+  function calculateAndDisplayRoute(directionsService,directionsDisplay) {
     directionsService.route({
-      origin: document.getElementById('start').value,
-      destination: document.getElementById('end').value,
+      origin:dataOrigin,
+      destination:dataDestiny,
       travelMode: 'DRIVING'
     }, function(response, status) {
       if (status === 'OK') {
         directionsDisplay.setDirections(response);
+        console.log(response);
       } else {
         window.alert('Directions request failed due to ' + status);
       }
-    });
+    })
   }
-const routing = () => {
-console.log("app");
-}
 
-routing();
-module.exports = routing ;
+  /*
+const drawRoutes=(response,status,directionsDisplay)=>{
+  if (status === 'OK') {
+    directionsDisplay.setDirections(response);
+  } else{
+    window.alert('Directions request failed ' + status);
+  }
+}
+*/
+module.exports = routing;
