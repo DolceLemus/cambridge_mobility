@@ -79,37 +79,60 @@
         <!--Section-->
         <section class="principal-container container-fluid text-items-center px-2 py-4">
             <div class="row m-auto p-2">
-                <div class="col-md-4">
+                <div class="box-data col-md-5">
     
                     <!--Profile-->
                     <div class="row profile">
-                        <div class="box-profile col-md-12">
-                            <img class="user-photo col-md-4" src="photo" alt="photo-profile">
-                            <p class="user-name col-md-8">User name</p>
+                        <div class="box-profile col-md-12 d-inline text-center">
+                            <img class="user-photo mt-2" src="photo" alt="photo-profile">
+                            <p class="user-name text-uppercase font-weight-bold black-text mt-2 mb-2">User name</p>
                         </div>
                     </div>
                     <!--/profile-->
-    
+
+                    <hr>
+
                     <!--Form-->
-                    <div class="row form">
-                        <div class="box-form col-md-12">
-    
+                    <form class="row form md-form text-items-center text-center pt-2 pb-2">
+                    
+                        <div class="box-form col-md-12 text-items-center d-inline m-auto">
+                            <a class="pt-1 pb-1">
+                                <i class="fa fa-address-card-o pr-1" aria-hidden="true"></i>
+                                <input class="font-weight-bold black-text" type="text" placeholder="Type your ZipCode">
+                            </a>
+                            <select class=" text-items-center d-inline mt-3 pt-1 pb-1" name="" id="">
+                                <option value="">Campus 1</option>
+                                <option value="">Campus 2</option>
+                                <option value="">Campus 3</option>
+                                <option value="">Campus 4</option>
+                                <option value="">Campus 5</option>
+                                <option value="">Campus 6</option>
+                            </select>
                         </div>
-                    </div>
+                    
+                        <div class="box-select col-md-12 text-items-center d-inline mt-2">
+                            <button type="submit">SEARCH</button>
+                        </div>
+                    </form>
                     <!--/form-->
+
+                    <hr>
     
                     <!--Routes-->
-                    <div class="row routes">
-                        <div class="box-routes col-md-12">
-    
+                    <div class="row routes text-items-center text-center pt-2 pb-2 mr-2 mñ-2">
+                        <div class="col-md-10 box-routes text-items-center d-inline m-auto ">
+                            <h4 class="route font-weight-bold black-text">Route</h4>
+                            <p class="distance text-left pl-4">km</p>
+                            <p class="time text-left pl-4">minutes</p>
                         </div>
+                        <a class="col-md-2 b-none text-items-center " href="#">More</a>
                     </div>
                     <!--/routes-->
     
                 </div>
     
                 <!--MAP FROM GOOGLE.MAPS-->
-                <div id="map" class="col-md-8 img-fluid p-2" style="height: 100vh;"></div>
+                <div id="map" class="col-md-7 img-fluid p-2" style="height: 100vh;"></div>
                 <!--/MAP-->
     
             </div>
@@ -131,8 +154,10 @@
 
     <!--<script src="./js/app.js"></script>-->
     <!--<script src="./src/app.js"></script>-->
-    <script src="./src/cp.js"></script>
+    <script src="./src/routing.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeUaZbq5ia_ArGo-r-2bV33u8fvRs1x8k"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeUaZbq5ia_ArGo-r-2bV33u8fvRs1x8k&callback=initMap">
+    </script>
     <!--<script src="./src/routing.js"></script>-->
 </body>
 </html>
