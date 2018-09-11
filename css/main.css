@@ -55,10 +55,20 @@ body {
   background-color: rgba(157, 176, 172, 0.8);
   border: 2px solid #3c1053; }
 
+.box-data {
+  background-color: rgba(240, 171, 0, 0.35);
+  border: 2px solid rgba(240, 171, 0, 0.15); }
+
 .navbar {
   background-color: #3c1053; }
 
 .profile {
-  border: 1px solid #d0006f; }
+  margin-top: 2rem; }
+  .profile .box-profile user-photo {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    max-height: 5rem;
+    max-width: 5rem;
+    margin-bottom: 2rem; }
 
 /*# sourceMappingURL=main.css.map */
