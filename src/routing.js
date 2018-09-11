@@ -45,12 +45,30 @@ function initMap() {
     }, function(response, status) {
       if (status === 'OK') {
         directionsDisplay.setDirections(response);
+
+        for(let i=0;i<response.routes.length;i++){
+          let address=response.routes;
+          console.log(address);
+        }
         console.log(response);
       } else {
         window.alert('Directions request failed due to ' + status);
       }
-    );
-  }
+    }
+    )}
+  
+
+const templateRouts=(routeText)=>{
+  var template='<div class="row routes text-items-center text-center pt-2 pb-2 mr-2 mñ-2">'+
+  '<div class="col-md-10 box-routes text-items-center d-inline m-auto ">'+
+      '<h4 class="text-route font-weight-bold mt-2">ROUT</h4>'+
+      '<p class="address text-left pl-4">'+address+'</p>'+
+      '<p class="distance text-left pl-4">'+distance+'</p>'+
+      '<p class="time text-left pl-4">'+time+'</p>'+
+  '</div>'+
+  '<a class="more col-md-2 b-none  font-weight-bold text-items-center text-center" href="#">More</a>'+
+'</div>'
+}
 
 
 // const rutingLocation=()=>{
