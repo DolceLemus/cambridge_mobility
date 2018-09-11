@@ -3,12 +3,43 @@
 body 
     font-family: $roboto
 
-.view
-    @include bgimage (localizacion)
-    
-.hm-black-light
-    background-color: rgba($graphite, 0.3)
+.mask
+    @include bgimage (map)
+    height: 100vh
+
+.container-fluid
+    background-color: rgba($dark, 0.5)
+    height: 100vh
+
+.box
+    margin-top: 20vh
+
+.box-welcome
+    background-color: rgba($platinum, 0.7)
+    border-radius: $radius
+
+.hr-light
+    color: $gold
+
+.welcome-text, .know-journey
+    color: $navy
+
+.text-description
+    color: $white
+    font-size: 120%
+
+.weather
+    color: $white
+    font-size: 120%
+    i 
+        color: $gold
 
 @media (max-width: 740px)
-    .view
-        height: 500px
+    .container-fluid
+        height: auto
+    .mask
+        height: auto
+    .box
+        margin-top: 0
+    .box-description
+        margin-top: 5rem

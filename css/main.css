@@ -1,19 +1,55 @@
 /* Colors */
 /*Fonts */
+/*Radius */
+/*BG-IMG function */
 body {
   font-family: Roboto, Sans-serif; }
 
-.view {
-  background-image: url("../assets/images/localizacion.png");
+.mask {
+  background-image: url("../assets/images/map.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  height: 100vh; }
 
-.hm-black-light {
-  background-color: rgba(60, 66, 66, 0.3); }
+.container-fluid {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh; }
+
+.box {
+  margin-top: 20vh; }
+
+.box-welcome {
+  background-color: rgba(157, 176, 172, 0.7);
+  border-radius: 5px; }
+
+.hr-light {
+  color: #f0ab00; }
+
+.welcome-text, .know-journey {
+  color: #003865; }
+
+.text-description {
+  color: #ffffff;
+  font-size: 120%; }
+
+.weather {
+  color: #ffffff;
+  font-size: 120%; }
+  .weather i {
+    color: #f0ab00; }
 
 @media (max-width: 740px) {
-  .view {
-    height: 500px; } }
+  .container-fluid {
+    height: auto; }
+
+  .mask {
+    height: auto; }
+
+  .box {
+    margin-top: 0; }
+
+  .box-description {
+    margin-top: 5rem; } }
 
 /*# sourceMappingURL=main.css.map */

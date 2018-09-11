@@ -1,10 +1,8 @@
 'use strict';
 
-
 const test = () => {
-    console.log("hola");
-}
+  console.log("hola");
+};
 
 test();
-
 module.exports = test;

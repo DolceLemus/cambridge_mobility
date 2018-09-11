@@ -18,31 +18,40 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <section id="map" style="height: 100vh;"></section>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeUaZbq5ia_ArGo-r-2bV33u8fvRs1x8k"> </script>
-
-    <header>
+    <header class="h-auto">
         <!-- Intro Section -->
-        <div class="view hm-black-light ">
+        <div class="mask rgba-black-light w-100 align-items-stretch">
             <div class="full-bg-img">
-                <div class="container flex-center">
-                    <div class="row pt-5 mt-3">
-                        <div class="col-md-12">
+                <div class="container-fluid p-3">
+                    <div class="box row p-3 mt-10 align-items-center">
+
+                        <div class="box-welcome col-md-6">
                             <div class="text-center">
-                                <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s">
-                                    <strong>Journey Planner</strong>
+                                <h1 class="welcome-text text-uppercase h1-reponsive font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s">
+                                    <strong>Welcome</strong>
                                 </h1>
-                                <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
-                                <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s">
-                                    <strong>Welcome!</strong>
-                                </h5>
-                                <p class="mb-5 white-text text-center wow fadeInDown" data-wow-delay="0.4s">
-                                    Do you know what´s Cambridge Mobility?
+                                
+                                <img class="img-fluid m-auto" src="assets/images/JourneyPlanner@2x.png" alt="logo-journeyPlanner">
+                                
+                                <hr class="welcome-text mt-2 wow fadeInDown" data-wow-delay="0.4s">
+                                
+                                <p class="know-journey mb-5 text-uppercase font-italic font-weight-bold text-center wow fadeInDown" data-wow-delay="0.4s">
+                                    Do you know what´s Journey Planner?
                                 </p>
 
-                                <a class="btn btn-outline-white" data-wow-delay="0.4s">Log In with Google</a>
+                                <a class="btn btn-amber mb-3" data-wow-delay="0.4s">LogIn Google</a>
                             </div>
                         </div>
+
+                        <div class="box-description col-md-5 text-center p-3 m-auto">
+                            <div class="weather mb-2 font-weight-bold" href=""><i class="fa fa-thermometer-half pr-2" aria-hidden="true"></i>Weather</div>
+                            <hr>
+                            <p class="text-description">Journey Planner is an app that will allow you to go from your current
+                            location to your destination through different alternate routes, knowing your estimated time of arrival,
+                            distance and even the weather, so you can choose your best option in a smoothly way.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -51,27 +60,8 @@
     </header>
     <!--Main Navigation-->
 
-    <!--Main Layout-->
-    <main>
+    <section id="map" style="height: 100vh;"></section>
 
-        <div class="container">
-            <div class="row py-5 mt-4">
-                <div class="col-md-12 text-center">
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.</p>
-
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    
-    <section id="map"></section>
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- bootstrap js/src -->
@@ -87,6 +77,7 @@
     <!--<script src="./js/app.js"></script>-->
     <!--<script src="./src/app.js"></script>-->
     <script src="./src/cp.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeUaZbq5ia_ArGo-r-2bV33u8fvRs1x8k"></script>
     <!--<script src="./src/routing.js"></script>-->
 </body>
 </html>
