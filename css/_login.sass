@@ -1,0 +1,41 @@
+@import _variables
+
+body 
+    font-family: $roboto
+
+.mask
+    @include bgimage (map)
+    height: 100vh
+
+.container-fluid
+    background-color: rgba($dark, 0.5)
+    height: 100vh
+
+.box
+    margin-top: 20vh
+
+.box-welcome
+    background-color: rgba($platinum, 0.7)
+    border-radius: $radius
+
+.hr-light
+    color: $gold
+
+.welcome-text, .know-journey
+    color: $navy
+
+.text-description
+    color: $white
+    font-size: 120%
+
+.weather
+    color: $white
+    font-size: 120%
+    i 
+        color: $gold
+
+@media (max-width: 740px)
+    .box
+        margin-top: 0
+    .box-description
+        margin-top: 6rem
