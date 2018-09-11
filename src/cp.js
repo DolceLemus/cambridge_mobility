@@ -1,4 +1,9 @@
 'use strict';
+<<<<<<< HEAD
+//Validate Cp 
+//CP=CB2 0AA
+// var dataOrigin = window.ubication;
+=======
 //Validate
 //CP=CB2 OAA
 var data = [
@@ -51,6 +56,7 @@ var data = [
       "description": "Saffron Walden CB10 1TS, UK",
     }
   ]
+>>>>>>> a75533a32df73844a9c968f9859ac16f8d6af8cf
 
 $("#search").click(function (event) {
     event.preventDefault();
@@ -64,6 +70,8 @@ $("#search").click(function (event) {
     
 })
 
+<<<<<<< HEAD
+=======
 const campusSelected=()=>{
     var optionSelect = $("#selected").val();
     console.log(optionSelect)
@@ -82,6 +90,7 @@ const campusSelected=()=>{
 }
 
 
+>>>>>>> a75533a32df73844a9c968f9859ac16f8d6af8cf
 const validateCp = (cp) => {
     const regex = /^([A-Za-z]{2}[0-9]{1,2}\s[0-9][A-Za-z]{2})$/;
     console.log(regex);
