@@ -104,21 +104,21 @@ body {
 
 .select-campus {
   border-radius: 5px;
-  background-color: rgba(60, 16, 83, 0.8);
-  border: 1px solid #f0ab00;
-  color: #ffffff; }
+  background-color: rgba(157, 176, 172, 0.3);
+  border: 1px solid #ffffff;
+  color: #003865; }
   .select-campus option {
-    background-color: rgba(60, 16, 83, 0.4);
-    color: #c4d600;
+    background-color: #9db0ac;
+    color: #ffffff;
     padding: 1rem; }
 
 .btn-search {
   border-radius: 5px;
-  background-color: rgba(208, 0, 111, 0.75);
+  background-color: rgba(240, 171, 0, 0.75);
   border: 1px solid #f0ab00;
-  color: #f0ab00; }
+  color: #000000; }
   .btn-search:hover {
-    border: 2px solid rgba(255, 255, 255, 0.5); }
+    border: 2px solid rgba(0, 0, 0, 0.5); }
 
 .routes .more {
   color: #d0006f; }
