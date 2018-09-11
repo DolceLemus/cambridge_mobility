@@ -45,7 +45,14 @@
                         </div>
 
                         <div class="box-description col-md-5 text-center p-3 m-auto">
-                            <div class="weather mb-2 font-weight-bold" href=""><i class="fa fa-thermometer-half pr-2" aria-hidden="true"></i>Weather</div>
+                            <div class="weather mb-2 font-weight-bold" href="">
+                                <div class="col-md-12 text-center d-inline">
+                                    <div class="font-weight-bold"d="box">
+                                        <h3 id="city">...</h3>
+                                        <i class="fa fa-thermometer-half pr-2" aria-hidden="true"></i><h3 id="temp"></h3>
+                                    </div>
+                                </div>
+                            </div>
                             <hr>
                             <p class="text-description">Journey Planner is an app that will allow you to go from your current
                             location to your destination through different alternate routes, knowing your estimated time of arrival,
@@ -142,7 +149,46 @@
                             <p class="distance text-left pl-4">km</p>
                             <p class="time text-left pl-4">minutes</p>
                         </div>
-                        <a class="more col-md-2 b-none  font-weight-bold text-items-center text-center" href="#">More</a>
+                        <div>
+                             <!-- Central Modal Medium Info -->
+                             <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">
+                                        <!--Content-->
+                                        <div class="modal-content">
+                                            <!--Header-->
+                                            <div class="modal-header">
+                                                <p class="heading lead">Mas Información</p>
+                                
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true" class="white-text">&times;</span>
+                                                </button>
+                                            </div>
+                                
+                                            <!--Body-->
+                                            <div class="modal-body">
+                                
+                                                <img src="https://mdbootstrap.com/wp-content/uploads/2016/11/admin-dashboard-bootstrap.jpg" alt="" class="img-fluid">
+                                
+                                                <div class="">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt vero illo error eveniet cum.</p>
+                                                </div>
+                                            </div>
+                                
+                                            <!--Footer-->
+                                            <div class="modal-footer justify-content-center">
+                                                <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cerrar</a>
+                                            </div>
+                                        </div>
+                                        <!--/.Content-->
+                                    </div>
+                                </div>
+                                <!-- Central Modal Medium Info-->
+                                
+                                <div class="text-center">
+                                    <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo">Launch Modal Info <i class="fa fa-eye ml-1"></i></a>
+                                </div>
+                        </div>
+                        <!-- <a class="more col-md-2 b-none  font-weight-bold text-items-center text-center" href="#">More</a> -->
                     </div>
                     <!--/routes-->
     
@@ -176,6 +222,7 @@
     <!--JS-->
     <!--<script src="./js/app.js"></script>-->
     <!--<script src="./src/app.js"></script>-->
+    <script src="./src/modal.js"></script>
     <script src="./src/weather.js"></script>
     <script src="./src/cp.js"></script>
     <script src="./src/routing.js"></script>
