@@ -18,6 +18,8 @@ firebase.auth().onAuthStateChanged(function (user) {//callback
   if (user) {
     console.log(user);
     //window.location = "views/principal.html";
+    $("#foto-perfil").attr("src", user.photoURL);
+    $("#nombre-perfil").text(user.displayName);
     $("#second-view").attr("style", "display:block");
     $("#first-view").attr("style", "display:none");
 
