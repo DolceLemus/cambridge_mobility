@@ -69,7 +69,7 @@ const templateRouts=(address,distance,time)=>{
         <div class="modal-content">
             <!--Header-->
             <div class="modal-header">
-                <p class="heading lead">Modal Info</p>
+                <p class="heading lead">Informacion de la Ruta</p>
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" class="white-text">&times;</span>
@@ -78,18 +78,10 @@ const templateRouts=(address,distance,time)=>{
 
             <!--Body-->
             <div class="modal-body">
-
-                <img src="https://mdbootstrap.com/wp-content/uploads/2016/11/admin-dashboard-bootstrap.jpg" alt="" class="img-fluid">
-
                 <div class="text-center">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt vero illo error eveniet cum.</p>
+                  <p class="distance text-left pl-4">Distancia: ${distance}</p>
+                  <p class="time text-left pl-4">Tiempo: ${time}</p>
                 </div>
-            </div>
-
-            <!--Footer-->
-            <div class="modal-footer justify-content-center">
-                <a type="button" class="btn btn-primary">Get it now <i class="fa fa-diamond ml-1"></i></a>
-                <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">No, thanks</a>
             </div>
         </div>
         <!--/.Content-->
@@ -98,7 +90,7 @@ const templateRouts=(address,distance,time)=>{
 <!-- Central Modal Medium Info-->
 
 <div class="text-center">
-    <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo">Launch Modal Info <i class="fa fa-eye ml-1"></i></a>
+    <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo">More Info</i></a>
 </div>
  `
 
