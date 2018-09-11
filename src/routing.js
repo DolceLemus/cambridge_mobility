@@ -56,13 +56,52 @@ function initMap() {
   }
 
 const templateRouts=(address,distance,time)=>{
-  var template='<div class="col-md-10 box-routes text-items-center d-inline m-auto ">'+
-      '<h4 class="text-route font-weight-bold mt-2">ROUT</h4>'+
-      '<p class="address text-left pl-4">'+address+'</p>'+
-      '<p class="distance text-left pl-4">'+distance+'</p>'+
-      '<p class="time text-left pl-4">'+time+'</p>'+
-  '</div>'+
-  '<a class="more col-md-2 b-none  font-weight-bold text-items-center text-center" href="#">More</a>'
+  var template=
+  `<div class="col-md-10 box-routes text-items-center d-inline m-auto ">
+     <h4 class="text-route font-weight-bold mt-2">ROUT</h4>
+     <p class="address text-left pl-4">${address}</p>
+     <p class="distance text-left pl-4">${distance}</p>
+     <p class="time text-left pl-4">${time}</p>
+ </div>
+ <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <p class="heading lead">Modal Info</p>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+
+                <img src="https://mdbootstrap.com/wp-content/uploads/2016/11/admin-dashboard-bootstrap.jpg" alt="" class="img-fluid">
+
+                <div class="text-center">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt vero illo error eveniet cum.</p>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer justify-content-center">
+                <a type="button" class="btn btn-primary">Get it now <i class="fa fa-diamond ml-1"></i></a>
+                <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">No, thanks</a>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!-- Central Modal Medium Info-->
+
+<div class="text-center">
+    <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo">Launch Modal Info <i class="fa fa-eye ml-1"></i></a>
+</div>
+ `
+
 return template;  
 }
 // module.exports = routing;
