@@ -1,8 +1,6 @@
 'use strict';
-//Validate Cp 
+//Validate
 //CP=CB2 0AA
-// var dataOrigin = window.ubication;
-
 var data = [
     {
       lat: 52.132509,

@@ -79,14 +79,12 @@ function initMap() {
   }
 
 const templateRouts=(address,distance,time,addressStart,addressEnd)=>{
-  var template=`<div class="col-md-10 font-weight-bold box-routes d-inline mb-2">
-      <h4 class="text-route font-weight-bold mt-2">ROUT</h4>
-      <p class="address text-center text-left pl-4"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>${address}</p>
+  var template=`<div class="col-md-12 font-weight-bold box-routes d-inline mb-2 pb-16 pt-8">
+      <a class="more-details btn btn.rounded btn-link btn-sm b-none font-weight-bold text-items-center text-center pull-right" data-toggle="modal" data-target="#sideModalTLInfo">More Details<i class="fa fa-arrow-right pl-2" aria-hidden="true"></i></a>
+      <h4 class="address text-left pl-4"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>${address}</h4>
       <span class="distance pl-4">${distance}</span>
       <span class="time pl-4">${time}</span>
   </div>
-
-  <a class="more-details btn btn.default btn.rounded b-none font-weight-bold text-items-center text-center" data-toggle="modal" data-target="#sideModalTLInfo">More Details<i class="fa fa-arrow-right pl-2" aria-hidden="true"></i></a>
   
  <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">

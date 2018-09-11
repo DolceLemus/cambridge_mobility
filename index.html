@@ -70,31 +70,33 @@
         <!--Section-->
         <section class="principal-container container-fluid text-items-center px-2 py-4">
 
-            <!-- Weather-->
-            <div class="row weather font-weight-bold text-items-center m-auto p-1 d-inline-block">
-                <div class="logo float-left">
-                    <a class="col-md-12 text-center m-auto navbar-brand px-lg-4 mr-0" href="#first-view">
-                        <img class="img-fluid" src="assets/images/JourneyPlanner.png" height="30" alt="logo-journeyPlanner">
-                    </a>
+            <!-- header-->
+            <header>
+                <div class="row weather font-weight-bold text-items-center m-auto p-1 d-inline-block">
+                    <div class="logo float-left">
+                        <a class="col-md-12 text-center m-auto navbar-brand px-lg-4 mr-0" href="#first-view">
+                            <img class="img-logo img-fluid" src="assets/images/JourneyPlanner.png" height="30" alt="logo-journeyPlanner">
+                        </a>
+                    </div>
+                    <div id="box" class="box-weather font-weight-bold text-center float-right">
+                        <p id="city2" class="text-city pr-2 ">...</p>
+                        <i id="icon-weather" class="fa fa-thermometer-half mt-2 p2" aria-hidden="true"></i>
+                        <span id="temp2"></span>
+                    </div>
                 </div>
-                <div id="box" class="box-weather font-weight-bold text-center float-right">
-                    <h3 id="city2" class="text-city">...</h3>
-                    <i id="icon-weather" class="fa fa-thermometer-half pr-2" aria-hidden="true"></i><span id="temp2"></span>
-                </div>
-            </div>
-            <!-- /Weather-->
-
+            </header>
+            <!-- /header-->
             <hr>
 
             <div class="row m-auto p-2">
-                <div class="box-data col-md-5">
+                <div class="box-data col-md-4">
     
                     <!--Profile-->
                     <div class="row profile">
-                        <div class="box-profile col-md-12 d-inline text-center">
+                        <div class="box-profile col-md-12 d-inline text-center ">
                             <img class="user-photo" src=""  id="foto-perfil" alt="photo-profile">
-                            <p class="user-name text-uppercase font-weight-bold mt-2 mb-2" id="nombre-perfil">User name</p>
-                            <button id="logout" type="submit" class="logout-button text-center font-weight-bold pt-1 pb-1 pl-2 pr-2">Log Out</button>
+                            <p class="user-name text-uppercase font-weight-bold mt-1 mb-1" id="nombre-perfil">User name</p>
+                            <button id="logout" type="submit" class="logout-button text-center font-weight-bold pt-1 pb-1 pl-2 pr-2"><i class="fa fa-mail-reply pr-2" aria-hidden="true"></i>Log Out</button>
                         </div>
                     </div>
                     <!--/profile-->
@@ -102,17 +104,17 @@
                     <hr>
 
                     <!--form-->
-                    <form class="row form md-form text-items-center text-center pt-2 pb-2">
+                    <form class="row form md-form text-items-center pt-2 pb-2">
                         <!--BOX FORM-->
                         <div class="box-form col-md-12 text-items-center d-inline m-auto">
                             <!--INPUT ZIPCODE-->
-                            <a class="input-zip-code pt-1 pb-1">
+                            <a class="input-zip-code pt-1">
                                 <i class="fa fa-address-card-o pr-1" aria-hidden="true"></i>
                                 <input id="input-value" class="font-weight-bold black-text" type="text" placeholder="Type your ZipCode">
                             </a>
                             <!--SELECT CAMPUS-->
-                            <select class="select-campus text-items-center text-center d-inline mt-3 p-1" name="" id="selected">
-                                    <option class="campus pt-1 pb-1">Select Campus</option>
+                            <select class="select-campus text-items-center text-center d-inline mt-2 p-1" name="" id="selected">
+                                <option class="campus pt-1 pb-1">Select Campus</option>
                                 <option class="campus pt-1 pb-1" value="Babraham Research">Babraham Research</option>
                                 <option class="campus pt-1 pb-1" value="Cambridge Biomedical">Cambridge Biomedical</option>
                                 <option class="campus pt-1 pb-1" value="Central Cambridge">Central Cambridge</option>
@@ -124,8 +126,8 @@
                         </div>
                     
                         <!--Button SEARCH-->
-                        <div class="box-select col-md-12 text-items-center d-inline mt-5">
-                            <button  id="search" class="btn-search text-center font-weight-bold pt-1 pb-1 pl-2 pr-2" type="button">SEARCH</button>
+                        <div class="box-select col-md-12 text-items-center d-inline mt-3 pull-right">
+                            <button  id="search" class="btn-search" type="button">Search</button>
                         </div>
                     </form>
                     <!--/form-->
@@ -133,7 +135,7 @@
                     <hr>
     
                     <!--Routes-->
-                    <div class="row routes text-items-center text-center pt-2 pb-2 mr-2 mñ-2" id="table-routes">
+                    <div class="row routes text-items-center mr-2 mñ-2" id="table-routes">
                         <!--<div class="col-md-10 box-routes text-items-center d-inline m-auto">
                             <h4 class="text-route font-weight-bold mt-2">Route</h4>
                             <p class="address text-left pl-4">address</p>
@@ -147,7 +149,7 @@
                 </div>
     
                 <!--MAP FROM GOOGLE.MAPS-->
-                <div id="map" class="container-map col-xs-12 col-md-7 img-fluid"></div>
+                <div id="map" class="container-map col-xs-12 col-md-8 img-fluid"></div>
                 <!--/MAP-->
     
             </div>
