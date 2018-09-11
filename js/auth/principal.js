@@ -6,21 +6,21 @@ $(document).ready(function(){
    $("#first-view").attr("style", "display:block");
    $("#second-view").attr("style", "display:none");
 
- });
+  });
 
 
-firebase.auth().onAuthStateChanged(function(user) {//callback
-    if (user) {
-      //console.log("Loggedin");
-      //console.log(user);
-      $("#foto-perfil").attr("src", user.photoURL);
-      $("#nombre-perfil").text(user.displayName);
-    }else{
-      console.log("desloguedo");
-      //window.location="../index.html"; //block
-      $("#first-view").attr("style", "display:none");
-      $("#second-view").attr("style", "display:block");
+// firebase.auth().onAuthStateChanged(function(user) {//callback
+//     if (user) {
+//       //console.log("Loggedin");
+//       //console.log(user);
+//       $("#foto-perfil").attr("src", user.photoURL);
+//       $("#nombre-perfil").text(user.displayName);
+//     }else{
+//       console.log("desloguedo");
+//       //window.location="../index.html"; //block
+//       $("#first-view").attr("style", "display:none");
+//       $("#second-view").attr("style", "display:block");
 
-    }
-   });
+//     }
+//    });
   });
