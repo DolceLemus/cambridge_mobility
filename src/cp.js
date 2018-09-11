@@ -1,5 +1,6 @@
 'use strict';
 //Validate Cp 
+
 const validateCp=()=>{
     let cp="CB22 3AT";
     const regex=/^([A-Za-z]{2}[0-9]{1,2}\s[0-9][A-Za-z]{2})$/;
@@ -56,10 +57,6 @@ const drawMap=(objUbication)=>{
 
   
 validateCp();
-
-
-
-
 module.exports = validateCp;
 
 
