@@ -1,7 +1,8 @@
 'use strict';
 
+const app = () => {
+console.log("app");
+}
 
-console.log("HOLAAAAAAAA");
-
-
-module.exports = ;
+app();
+module.exports = app ;
