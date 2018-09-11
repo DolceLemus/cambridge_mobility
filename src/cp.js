@@ -1,7 +1,7 @@
 'use strict';
 //Validate Cp 
 //CP=CB2 0AA
-var dataOrigin = window.ubication;
+// var dataOrigin = window.ubication;
 
 $("#search").click(function (event) {
     event.preventDefault();
@@ -13,8 +13,6 @@ $("#search").click(function (event) {
 
     
 })
-
-
 
 const validateCp = (cp) => {
     const regex = /^([A-Za-z]{2}[0-9]{1,2}\s[0-9][A-Za-z]{2})$/;
