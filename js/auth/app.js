@@ -25,6 +25,8 @@ firebase.auth().onAuthStateChanged(function (user) {//callback
     //con sole.log(user);
   } else {
     console.log("desloguedo");
+    $("#first-view").attr("style", "display:none");
+    $("#second-view").attr("style", "display:block");
   }
 });
 
