@@ -1,10 +1,20 @@
 .profile
     margin-top: 2rem
     .box-profile
-        user-photo
+        color: $purple
+        .user-photo
             border-radius: $radius-circule
-            border: 1px solid $dark
-            max-height: 5rem
-            max-width: 5rem
-            p 
-            margin-bottom: 2rem
+            border: 1px solid $magenta
+            max-width: 50%
+
+.logout-button
+    border-radius: $radius
+    background-color: rgba($magenta, 0.75)
+    border: 1px solid $gold
+    color: $gold
+
+@media (max-width: 740px)
+    .user-photo
+        border-radius: $radius-circule
+        border: 1px solid $dark
+        max-width: 50%

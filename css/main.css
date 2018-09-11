@@ -55,30 +55,41 @@ body {
   background-color: rgba(157, 176, 172, 0.8);
   border: 2px solid #3c1053; }
 
-.weather-principal-container {
-  color: #3c1053;
-  font-size: 130%; }
-  .weather-principal-container i {
-    color: #d0006f;
-    font-size: 150%; }
-
 .box-data {
   background-color: rgba(240, 171, 0, 0.9);
   border: 3px solid #f0ab00;
-  padding: 3rem; }
+  padding: 1rem; }
 
 .navbar {
   background-color: #3c1053; }
 
+.box-weather {
+  color: #3c1053;
+  font-size: 130%; }
+  .box-weather i {
+    color: #d0006f;
+    font-size: 150%; }
+
 .profile {
   margin-top: 2rem; }
-  .profile .box-profile user-photo {
+  .profile .box-profile {
+    color: #3c1053; }
+    .profile .box-profile .user-photo {
+      border-radius: 50%;
+      border: 1px solid #d0006f;
+      max-width: 50%; }
+
+.logout-button {
+  border-radius: 5px;
+  background-color: rgba(208, 0, 111, 0.75);
+  border: 1px solid #f0ab00;
+  color: #f0ab00; }
+
+@media (max-width: 740px) {
+  .user-photo {
     border-radius: 50%;
     border: 1px solid #000000;
-    max-height: 5rem;
-    max-width: 5rem;
-    margin-bottom: 2rem; }
-
+    max-width: 50%; } }
 .input-zip-code {
   max-width: 80%; }
   .input-zip-code i {
