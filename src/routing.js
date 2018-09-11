@@ -22,6 +22,7 @@ var dataDestiny =
     console.log('Se ha presentado un error');
   }
 */
+
 function initMap() {
     let directionsService = new google.maps.DirectionsService;
     console.log(directionsService);
@@ -39,7 +40,8 @@ function initMap() {
     directionsService.route({
       origin:dataOrigin,
       destination:dataDestiny,
-      travelMode: 'DRIVING'
+      travelMode: 'DRIVING',
+      provideRouteAlternatives:true
     }, function(response, status) {
       if (status === 'OK') {
         directionsDisplay.setDirections(response);

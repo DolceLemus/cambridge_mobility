@@ -1,19 +1,21 @@
 'use strict';
 //Validate Cp 
-var datadestiny = [
-    {
-      "lat": "52.132509",
-      "lng": "0.1390254"
-    }];
-  
+//CP=CB2 OAA
 
-const validateCp=()=>{
+$("#search").click(function (event) {
+    event.preventDefault();
+    var cp = $("#input-value").val();
+    console.log(cp);
+    var optionSelect = $("#selected").val();
+    validateCp(cp);
+})
+
+
 const validateCp=(cp)=>{
-    let cp="CB22 3AT";
     const regex=/^([A-Za-z]{2}[0-9]{1,2}\s[0-9][A-Za-z]{2})$/;
         console.log(regex);
     if (regex.exec(cp) != null){
-        let cpWithSpace=cp.replace(" ","%20");
+        let cpWithSpace=cp.replace(" ","%");
         console.log(cpWithSpace);
         getLocationCp(cp);
         return true;
@@ -61,8 +63,6 @@ const drawMap=(objUbication)=>{
  })
     return cpMaker.setMap(map);
 }
-validateCp();
-module.exports = validateCp;
 
 
 
