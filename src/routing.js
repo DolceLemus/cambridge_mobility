@@ -72,7 +72,11 @@ const templateRouts=(address,distance,time)=>{
         <div class="modal-content">
             <!--Header-->
             <div class="modal-header">
+<<<<<<< HEAD
                 <p class="heading lead">Route Information</p>
+=======
+                <p class="heading lead">Informacion de la Ruta</p>
+>>>>>>> ca6843c0774e7c5c627a82f3d62fa830fb3f948f
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" class="white-text">&times;</span>
@@ -82,14 +86,26 @@ const templateRouts=(address,distance,time)=>{
             <!--Body: Card-->
             <div class="modal-body">
                 <div class="text-center">
+<<<<<<< HEAD
                     <p class="distance text.left pl-4">Distance: ${distance}</p>
                     <p class="time text.left pl-4">Time: ${time}</p>
                 </div>
             </div>
 
+=======
+                  <p class="distance text-left pl-4">Distancia: ${distance}</p>
+                  <p class="time text-left pl-4">Tiempo: ${time}</p>
+                </div>
+            </div>
+>>>>>>> ca6843c0774e7c5c627a82f3d62fa830fb3f948f
         </div>
 
+<<<<<<< HEAD
     </div>
+=======
+<div class="text-center">
+    <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo">More Info</i></a>
+>>>>>>> ca6843c0774e7c5c627a82f3d62fa830fb3f948f
 </div>
 <!-- Central Modal Medium Info-->`
 

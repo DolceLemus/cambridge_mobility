@@ -19,6 +19,8 @@ async function getWeather() {
     const json = await res.json();
     document.getElementById("city").innerText = json.name;
     document.getElementById("temp").innerText = json.main.temp;
+    document.getElementById("city2").innerText = json.name;
+    document.getElementById("temp2").innerText = json.main.temp;
     console.log(json);
 }
 // Get location from users browser
