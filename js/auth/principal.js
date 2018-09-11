@@ -6,7 +6,7 @@ $(document).ready(function(){
    $("#first-view").attr("style", "display:block");
    $("#second-view").attr("style", "display:none");
 
- });
+  });
 
 
 // firebase.auth().onAuthStateChanged(function(user) {//callback
