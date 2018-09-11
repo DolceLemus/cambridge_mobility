@@ -40,10 +40,16 @@ body {
     color: #f0ab00; }
 
 @media (max-width: 740px) {
+  .container-fluid {
+    height: auto; }
+
+  .mask {
+    height: auto; }
+
   .box {
     margin-top: 0; }
 
   .box-description {
-    margin-top: 6rem; } }
+    margin-top: 5rem; } }
 
 /*# sourceMappingURL=main.css.map */
