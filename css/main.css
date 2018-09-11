@@ -72,13 +72,26 @@ body {
 
 .profile {
   margin-top: 2rem; }
-  .profile .box-profile user-photo {
+  .profile .box-profile .user-photo {
     border-radius: 50%;
     border: 1px solid #000000;
-    max-height: 5rem;
-    max-width: 5rem;
-    margin-bottom: 2rem; }
+    max-height: 10rem;
+    max-width: 10rem; }
+    .profile .box-profile .user-photo p {
+      margin-bottom: 2rem; }
 
+.logout-button {
+  border-radius: 5px;
+  background-color: rgba(208, 0, 111, 0.75);
+  border: 1px solid #f0ab00;
+  color: #f0ab00; }
+
+@media (max-width: 740px) {
+  .user-photo {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    max-height: 8rem;
+    max-width: 8rem; } }
 .input-zip-code {
   max-width: 80%; }
   .input-zip-code i {
