@@ -58,12 +58,12 @@ function initMap() {
 const templateRouts=(address,distance,time)=>{
   var template=`<div class="col-md-10 font-weight-bold box-routes d-inline mb-2">
       <h4 class="text-route font-weight-bold mt-2">ROUT</h4>
-      <p class="address text-left pl-4"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>${address}</p>
+      <p class="address text-center text-left pl-4"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>${address}</p>
       <span class="distance pl-4">${distance}</span>
       <span class="time pl-4">${time}</span>
   </div>
-  <div class="more-btn text-center">
-    <a class="more btn btn.default btn.rounded col-md-2 b-none font-weight-bold text-items-center text-center" data-toggle="modal" data-target="#sideModalTLInfo">More<i class="fa fa-eye ml-1"></i></a>
+  <div class="more-btn text-center font-weight-bold text-items-center m-auto">
+    <a class="more btn btn.default btn.rounded col-md-2 b-none font-weight-bold text-items-center text-center" data-toggle="modal" data-target="#sideModalTLInfo">More Details<i class="fa fa-arrow-right pl-2" aria-hidden="true"></i></a>
   </div>
   
  <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -72,11 +72,7 @@ const templateRouts=(address,distance,time)=>{
         <div class="modal-content">
             <!--Header-->
             <div class="modal-header">
-<<<<<<< HEAD
                 <p class="heading lead">Route Information</p>
-=======
-                <p class="heading lead">Informacion de la Ruta</p>
->>>>>>> ca6843c0774e7c5c627a82f3d62fa830fb3f948f
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" class="white-text">&times;</span>
@@ -86,26 +82,13 @@ const templateRouts=(address,distance,time)=>{
             <!--Body: Card-->
             <div class="modal-body">
                 <div class="text-center">
-<<<<<<< HEAD
-                    <p class="distance text.left pl-4">Distance: ${distance}</p>
-                    <p class="time text.left pl-4">Time: ${time}</p>
-                </div>
-            </div>
-
-=======
                   <p class="distance text-left pl-4">Distancia: ${distance}</p>
                   <p class="time text-left pl-4">Tiempo: ${time}</p>
                 </div>
             </div>
->>>>>>> ca6843c0774e7c5c627a82f3d62fa830fb3f948f
         </div>
 
-<<<<<<< HEAD
     </div>
-=======
-<div class="text-center">
-    <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo">More Info</i></a>
->>>>>>> ca6843c0774e7c5c627a82f3d62fa830fb3f948f
 </div>
 <!-- Central Modal Medium Info-->`
 
