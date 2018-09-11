@@ -85,9 +85,8 @@ const templateRouts=(address,distance,time,addressStart,addressEnd)=>{
       <span class="distance pl-4">${distance}</span>
       <span class="time pl-4">${time}</span>
   </div>
-  <div class="more-btn text-center font-weight-bold text-items-center m-auto">
-    <a class="more btn btn.default btn.rounded col-md-2 b-none font-weight-bold text-items-center text-center" data-toggle="modal" data-target="#sideModalTLInfo">More Details<i class="fa fa-arrow-right pl-2" aria-hidden="true"></i></a>
-  </div>
+
+  <a class="more-details btn btn.default btn.rounded b-none font-weight-bold text-items-center text-center" data-toggle="modal" data-target="#sideModalTLInfo">More Details<i class="fa fa-arrow-right pl-2" aria-hidden="true"></i></a>
   
  <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">

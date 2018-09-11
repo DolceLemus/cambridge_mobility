@@ -26,38 +26,33 @@
                 <div class="container-login container-fluid p-3">
                     <div class="box row p-3 mt-10 align-items-center">
 
-                        <div class="box-welcome col-md-6">
-                            <div class="text-center">
-                                <h1 class="welcome-text text-uppercase h1-reponsive font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s">
-                                    <strong>Welcome</strong>
-                                </h1>
+                        <div class="box-welcome col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center">
+                            <div class="">
                                 
-                                <img class="img-fluid m-auto" src="assets/images/JourneyPlanner@2x.png" alt="logo-journeyPlanner">
+                                <img class="img-fluid mt-2" src="assets/images/JourneyPlanner@2x.png" alt="logo-journeyPlanner">
                                 
                                 <hr class="welcome-text mt-2 wow fadeInDown" data-wow-delay="0.4s">
                                 
-                                <p class="know-journey mb-5 text-uppercase font-italic font-weight-bold text-center wow fadeInDown" data-wow-delay="0.4s">
-                                    Do you know what´s Journey Planner?
-                                </p>
+                                <h3 class="welcome-text text-uppercase h1-reponsive font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s">
+                                    <strong>Welcome</strong>
+                                </h3>
 
-                                <button type="button" id="login" class="btn btn-amber mb-3" data-wow-delay="0.4s">LogIn Google</button>
-                            </div>
-                        </div>
+                                <p class="text-description p-2">Journey Planner is an app that will allow you to go from your current
+                                    location to a destination.</p>
 
-                        <div class="box-description col-md-5 text-center p-3 m-auto">
-                            <div class="weather mb-2 font-weight-bold" href="">
-                                <div class="col-md-12 text-center d-inline">
-                                    <div id="box" class="box-weather font-weight-bold col-md-12 text-center d-inline">
-                                        <h3 id="city" class="text-city white-text">...</h3>
-                                        <i class="fa fa-thermometer-half pr-2" aria-hidden="true"></i><span id="temp" class="white-text"></span>
+                                <button type="button" id="login" class="btn btn-amber mb-1" data-wow-delay="0.4s">LogIn Google</button>
+                                
+                                <hr class="mb-2">
+
+                                <div class="box-description text-center blue-text pb-3">
+                                    <small>Current Weather</small>
+                                    <div id="box" class="box-weather weather col-md-12 text-center d-inline" href="">
+                                        <span id="city" class="text-city black-text pr-2">...</span>
+                                        <i class="text-city fa fa-thermometer-half pr-1" aria-hidden="true"></i><span id="temp" class="black-text"></span>  
                                     </div>
                                 </div>
+
                             </div>
-                            <hr>
-                            <p class="text-description">Journey Planner is an app that will allow you to go from your current
-                            location to your destination through different alternate routes, knowing your estimated time of arrival,
-                            distance and even the weather, so you can choose your best option in a smoothly way.
-                            </p>
                         </div>
 
                     </div>
@@ -71,23 +66,18 @@
 
                         <!--     SECOND VIEW - ROUTES      -->
     <div id="second-view">
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg text-items-center m-auto">
-            <div class="container m-auto p-1">
-                <!-- Navbar brand -->
-                <a class="col-md-12 text-center m-auto navbar-brand px-lg-4 mr-0" href="#first-view">
-                    <img class="img-fluid" src="assets/images/JourneyPlanner.png" height="30" alt="logo-journeyPlanner">
-                </a>
-            </div>
-        </nav>
-        <!--/Navbar-->
     
         <!--Section-->
         <section class="principal-container container-fluid text-items-center px-2 py-4">
 
             <!-- Weather-->
-            <div class="row weather font-weight-bold text-items-center m-auto p-1">
-                <div id="box" class="box-weather font-weight-bold col-md-12 text-center d-inline">
+            <div class="row weather font-weight-bold text-items-center m-auto p-1 d-inline-block">
+                <div class="logo float-left">
+                    <a class="col-md-12 text-center m-auto navbar-brand px-lg-4 mr-0" href="#first-view">
+                        <img class="img-fluid" src="assets/images/JourneyPlanner.png" height="30" alt="logo-journeyPlanner">
+                    </a>
+                </div>
+                <div id="box" class="box-weather font-weight-bold text-center float-right">
                     <h3 id="city2" class="text-city">...</h3>
                     <i id="icon-weather" class="fa fa-thermometer-half pr-2" aria-hidden="true"></i><span id="temp2"></span>
                 </div>
@@ -157,7 +147,7 @@
                 </div>
     
                 <!--MAP FROM GOOGLE.MAPS-->
-                <div id="map" class="container-map col-md-7 img-fluid"></div>
+                <div id="map" class="container-map col-xs-12 col-md-7 img-fluid"></div>
                 <!--/MAP-->
     
             </div>
