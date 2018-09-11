@@ -57,6 +57,9 @@ const drawMap=(objUbication)=>{
   
 validateCp();
 
+
+
+
 module.exports = validateCp;
 
 
