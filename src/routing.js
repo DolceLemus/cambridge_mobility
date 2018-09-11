@@ -1,16 +1,20 @@
 'use strict';
+/*
 var dataOrigin =
   {
     lat: 52.1725291,
     lng: 0.1340254
   };
+ 
+  
+  var dataDestiny={};
 
-var dataDestiny =
-  {
-    lat: 52.132509,
-    lng: 0.1390254
-  };
+  $("#search").click(function (event) {
+    event.preventDefault();
+    
+})
 
+*/
 function initMap() {
     let directionsService = new google.maps.DirectionsService;
     console.log(directionsService);
