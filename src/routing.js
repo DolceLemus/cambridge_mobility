@@ -1,4 +1,7 @@
-'use strict';
+// 'use strict';
+
+// import getGeolocation from './cp'
+
 var dataOrigin =
   {
     lat: 52.1725291,
@@ -12,19 +15,20 @@ var dataDestiny =
   };
 
 function initMap() {
-    let directionsService = new google.maps.DirectionsService;
+    window.directionsService = new google.maps.DirectionsService;
     console.log(directionsService);
     let directionsDisplay = new google.maps.DirectionsRenderer;
     let containerMap = document.getElementById('map');
-    let map = new google.maps.Map(containerMap,{
+    window.map = new google.maps.Map(containerMap,{
       zoom: 0.5,
       center: {lat:52.1920702 , lng: 0.1334396}
     });
     directionsDisplay.setMap(map);
 
-    calculateAndDisplayRoute(directionsService,directionsDisplay,map);
+    //calculateAndDisplayRoute(directionsService,directionsDisplay,map);
+    // getGeolocation();
   }
-  function calculateAndDisplayRoute(directionsService,directionsDisplay,map) {
+  function calculateAndDisplayRoute(dataOrigin, dataDestiny) {
     directionsService.route({
       origin: dataOrigin,
       destination: dataDestiny,
@@ -32,7 +36,6 @@ function initMap() {
       provideRouteAlternatives: true
     }, function(response, status){
       if (status === 'OK') {
-
         for (var i = 0, len = response.routes.length; i < len; i++) {
           new google.maps.DirectionsRenderer({
               map: map,
@@ -41,6 +44,7 @@ function initMap() {
           });
           console.log(response.routes);
           response.DirectionsResult;
+          
           let address=response.routes[i].summary;
           // console.log(address);
           // console.log((response));
