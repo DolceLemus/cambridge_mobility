@@ -14,6 +14,7 @@ window.addEventListener('load', e =>{
     getLocation();
     getWeather();
 });
+
 async function getWeather() {
     const res = await fetch(buildApiUrl());
     const json = await res.json();
@@ -23,6 +24,7 @@ async function getWeather() {
     document.getElementById("temp2").innerText = json.main.temp;
     console.log(json);
 }
+
 // Get location from users browser
 function getLocation() {
     if (navigator.geolocation) {
