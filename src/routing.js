@@ -32,6 +32,7 @@ function initMap() {
       provideRouteAlternatives: true
     }, function(response, status){
       if (status === 'OK') {
+
         for (var i = 0, len = response.routes.length; i < len; i++) {
           new google.maps.DirectionsRenderer({
               map: map,
@@ -39,8 +40,9 @@ function initMap() {
               routeIndex: i
           });
           response.DirectionsResult;
-          let address=response.routes[i].legs[0].duration.end_addres;
-         console.log(JSON.stringify(response.routes[i].legs[0]));
+          let address=response.routes[i].summary;
+          console.log(address);
+         console.log((response));
           let distance=(response.routes[i].legs[0].distance.text);
           console.log(distance);
           let time=(response.routes[i].legs[0].duration.text);
