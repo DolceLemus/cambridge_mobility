@@ -56,13 +56,43 @@ function initMap() {
   }
 
 const templateRouts=(address,distance,time)=>{
-  var template='<div class="col-md-10 font-weight-bold box-routes d-inline mb-2">'+
-      '<h4 class="text-route font-weight-bold mt-2">ROUT</h4>'+
-      '<p class="address text-left pl-4"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>'+address+'</p>'+
-      '<span class="distance pl-4">'+distance+'</span>'+
-      '<span class="time pl-4">'+time+'</span>'+
-  '</div>'+
-  '<a class="more col-md-2 b-none font-weight-bold text-items-center text-center" href="#">More</a>'
+  var template=`<div class="col-md-10 font-weight-bold box-routes d-inline mb-2">
+      <h4 class="text-route font-weight-bold mt-2">ROUT</h4>
+      <p class="address text-left pl-4"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>${address}</p>
+      <span class="distance pl-4">${distance}</span>
+      <span class="time pl-4">${time}</span>
+  </div>
+  <div class="more-btn text-center">
+    <a class="more btn btn.default btn.rounded col-md-2 b-none font-weight-bold text-items-center text-center" data-toggle="modal" data-target="#sideModalTLInfo">More<i class="fa fa-eye ml-1"></i></a>
+  </div>
+  
+ <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <p class="heading lead">Route Information</p>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+
+            <!--Body: Card-->
+            <div class="modal-body">
+                <div class="text-center">
+                    <p class="distance text.left pl-4">Distance: ${distance}</p>
+                    <p class="time text.left pl-4">Time: ${time}</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- Central Modal Medium Info-->`
+
 return template;  
 }
 // module.exports = routing;
