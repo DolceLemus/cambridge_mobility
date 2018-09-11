@@ -1,3 +1,19 @@
+
+'use strict';
+/*
+var dataOrigin =
+  {
+    lat: 52.1725291,
+    lng: 0.1340254
+  };
+ 
+  
+  var dataDestiny={};
+
+  $("#search").click(function (event) {
+    event.preventDefault();
+    
+})
 // 'use strict';
 
 // import getGeolocation from './cp'
@@ -13,7 +29,7 @@
 //     lat: 52.132509,
 //     lng: 0.1390254
 //   };
-
+*/
 function initMap() {
     window.directionsService = new google.maps.DirectionsService;
     console.log(directionsService);
