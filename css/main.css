@@ -58,7 +58,7 @@ body {
 .box-data {
   background-color: rgba(240, 171, 0, 0.9);
   border: 3px solid #f0ab00;
-  padding: 3rem; }
+  padding: 1rem; }
 
 .navbar {
   background-color: #3c1053; }
@@ -72,12 +72,12 @@ body {
 
 .profile {
   margin-top: 2rem; }
-  .profile .box-profile .user-photo {
-    border-radius: 50%;
-    border: 1px solid #000000;
-    max-width: 50%; }
-    .profile .box-profile .user-photo p {
-      margin-bottom: 2rem; }
+  .profile .box-profile {
+    color: #3c1053; }
+    .profile .box-profile .user-photo {
+      border-radius: 50%;
+      border: 1px solid #d0006f;
+      max-width: 50%; }
 
 .logout-button {
   border-radius: 5px;
