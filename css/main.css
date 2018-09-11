@@ -79,7 +79,7 @@ body {
 .profile {
   margin-top: 2rem; }
   .profile .box-profile {
-    color: #3c1053; }
+    color: #003865; }
     .profile .box-profile .user-photo {
       border-radius: 50%;
       border: 1px solid #ffffff;
@@ -99,31 +99,36 @@ body {
 .input-zip-code {
   max-width: 80%; }
   .input-zip-code i {
-    color: #3c1053;
+    color: #003865;
     font-size: 150%; }
 
 .select-campus {
   border-radius: 5px;
   background-color: rgba(157, 176, 172, 0.3);
-  border: 1px solid #ffffff;
+  border: 1px solid #003865;
   color: #003865; }
   .select-campus option {
     background-color: #9db0ac;
-    color: #ffffff;
+    color: #000000;
     padding: 1rem; }
 
 .btn-search {
   border-radius: 5px;
   background-color: rgba(240, 171, 0, 0.75);
   border: 1px solid #f0ab00;
-  color: #000000; }
+  color: #ffffff;
+  padding: 8px 16px; }
   .btn-search:hover {
-    border: 2px solid rgba(0, 0, 0, 0.5); }
+    border: 2px solid rgba(255, 255, 255, 0.5); }
 
 .routes .more {
   color: #d0006f; }
-.routes .box-routes h4 {
-  color: #830051; }
+.routes .box-routes {
+  padding-bottom: 16px;
+  padding-top: 8px;
+  border-bottom: 1px solid lightgray; }
+  .routes .box-routes h4 {
+    color: #830051; }
 
 @media (max-width: 740px) {
   .more-details {

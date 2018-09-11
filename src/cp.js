@@ -1,6 +1,6 @@
 'use strict';
 //Validate
-//CP=CB2 OAA
+//CP=CB2 0AA
 var data = [
     {
       lat: 52.132509,
